@@ -6,7 +6,7 @@ while True:
     print("4. Decimal a Binario")
     print("5. Dígitos de un número")
     print("6. Salir")
-    opcion=print("Seleccione una opcion: ")
+    opcion=print("Seleccione la accion que desea realizar: ")
     match opcion:
         case "1":
             print("Calcular el MCD")
@@ -14,22 +14,54 @@ while True:
                 return 0
             a=int("Ingrese el primer número")
             b=int("Ingrese el segundo número")
-            MCD(a, b)
+            for a, b in (a*b/b):
+                c=a*b/b
+                print(f"El MCD: {a} y {b} es: {c}")
         case "2":
             print("Cadena repetida")
+            def cadena(palabra,veces=0):
+                if veces == len(palabra):
+                    return 0
+                if palabra[veces].lower()== veces.lower():
+                    return contar(palabra,veces+1)+1
+                else:
+                    return contar(palabra,veces+1)
+            if len(palabra)!=1:
+                palabra=input("Ingrese una palabra: ")
+                veces=input("Ingrese cuantas veces quiere que se repita: ")
+            else:
+                cantidad=contar(palabra*veces)
+                print(f"{palabra}*{cantidad}.")
         case "3":
             print("Cuantas veces aparece una letra")
-            def contarpalabra(letra,palabra):
-                return 0
-            letra=input("Ingresa una letra: ")
-            palabra=input("Ingresa una palabra: ")
-            contarpalabra(letra,palabra)
+            def contar(frase,letra,aparece=0):
+                if aparece == len(frase):
+                    return 0
+                if frase[aparece].lower()== letra.lower():
+                    return contar(frase,letra,aparece+1)+1
+                else:
+                    return contar(frase,letra,aparece+1)
+            frase=input("Ingrese una palabra: ")
+            letra=input("Ingrese una letra para contar: ")
+            if len(letra)!=1:
+                print("Por favor ingresa una letra")
+            else:
+                cantidad=contar(frase,letra)
+                print(f"la letra {letra} aparece {cantidad} veces.")
         case "4":
             print("Decimal a Binario")
+            def binario(i, j):
+                return 0
+
         case "5":
             print("Digitos de un número")
+            def MCD(a, b):
+                return 0
+            a=int("Ingrese el primer número")
+            b=int("Ingrese el segundo número")
+            for a, b in (a*b/b):
+                c=a*b/b
+                print(f"El MCD: {a} y {b} es: {c}")
         case "6":
             print("Saliendo.")
             break
-        case _:
-            print("Opcion no valida")
