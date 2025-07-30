@@ -50,18 +50,8 @@ while True:
                 print(f"la letra {letra} aparece {cantidad} veces.")
         case "4":
             print("Decimal a Binario")
-            def binario(i, j):
-                return 0
-
         case "5":
             print("Digitos de un número")
-            def MCD(a, b):
-                return 0
-            a=int("Ingrese el primer número")
-            b=int("Ingrese el segundo número")
-            for a, b in (a*b/b):
-                c=a*b/b
-                print(f"El MCD: {a} y {b} es: {c}")
         case "6":
             print("Saliendo.")
             break
