@@ -22,7 +22,7 @@ while True:
             def cadena(palabra,veces=0):
                 if veces == len(palabra):
                     return 0
-                if palabra[veces].lower()== veces.lower():
+                if palabra[veces]== veces:
                     return contar(palabra,veces+1)+1
                 else:
                     return contar(palabra,veces+1)
@@ -37,7 +37,7 @@ while True:
             def contar(frase,letra,aparece=0):
                 if aparece == len(frase):
                     return 0
-                if frase[aparece].lower()== letra.lower():
+                if frase[aparece]== letra:
                     return contar(frase,letra,aparece+1)+1
                 else:
                     return contar(frase,letra,aparece+1)
